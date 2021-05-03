@@ -26,15 +26,15 @@ const Card = (props) => {
       x: position.x,
       y: position.y,
       autoAlpha: 1,
-      duration: 0.5,
-      delay: index * 0.3,
-      ease: Linear.easeIn,
+      duration: 0.15,
+      delay: index * 0.2,
+      ease: Linear.easeNone,
     }).to(
       ref.current,
       {
         visibility: "hidden",
 
-        delay: 1,
+        delay: 2,
         duration: 0,
       },
       1

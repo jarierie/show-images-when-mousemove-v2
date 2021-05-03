@@ -17,19 +17,23 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  background: #0d0d0d;
 `;
 
 const TextContainer = styled.div`
   width: 900px;
-  height: 400px;
+  height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 100px;
   font-weight: bolder;
   letter-spacing: -5px;
+  z-index: 999;
+  color: #f5f5f5;
   &:hover {
     cursor: pointer;
+    color: gold;
   }
 `;
 
@@ -57,8 +61,8 @@ const Main = () => {
   };
   return (
     <>
-      <Container onMouseMove={hoverSet}>
-        <TextContainer>Hover over me</TextContainer>
+      <Container>
+        <TextContainer onMouseMove={hoverSet}>Hover over me</TextContainer>
         {array.map((item, index) => {
           return (
             <>
@@ -71,7 +75,6 @@ const Main = () => {
             </>
           );
         })}
-        <h1>{currentItem}</h1>
       </Container>{" "}
       <Container></Container>
     </>
